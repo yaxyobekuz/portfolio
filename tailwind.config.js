@@ -3,7 +3,38 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        primary: "#39965F",
+        secondary: "#ffffff",
+
+        dark: {
+          100: "#545454",
+          200: "#313131",
+          300: "#1B1B1B",
+        },
+
+        accent: {
+          pink: "#FF507D",
+          blue: "#5CB0FF",
+          green: "#00C853",
+        },
+      },
+
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+
+      zIndex: {
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+        5: 5,
+        6: 6,
+        7: 7,
+        8: 8,
+        9: 9,
+      },
     },
   },
   plugins: [],
