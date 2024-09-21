@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Base --- */
+
+@layer base {
+  body {
+    @apply text-base text-gray-800 font-normal;
+  }
+}
+
+/* --- Utilities --- */
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl w-full px-5 mx-auto;
+  }
+}
