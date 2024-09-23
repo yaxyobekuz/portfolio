@@ -1,17 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+// Components
 import Icon from "./Icon";
+import SolidArrow from "./SolidArrow";
+
+// Data
+import userProfile from "../data/userProfile";
+
+// Translate
+import { useTranslation } from "react-i18next";
 
 // Images
 import reloadIcon from "../assets/images/icons/reload.svg";
-import SolidArrow from "./SolidArrow";
-import { useTranslation } from "react-i18next";
-// Images
 import profileImage from "../assets/images/others/profile-image.jpg";
-import userProfile from "../data/userProfile";
+
+// Images
 
 const Sidebar = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const handlePageReload = () => {
     window.location.reload();
@@ -20,7 +27,7 @@ const Sidebar = () => {
   const { socialLinks, tags } = userProfile;
 
   return (
-    <div className="w-[340px] h-full shrink-0 bg-dark-300 border-r-2 border-dark-200">
+    <div className="absolute inset-y-0 left-0 -translate-x-full w-[340px] h-full shrink-0 bg-dark-300 border-r-2 border-dark-200 transition-transform duration-200 xl:!translate-x-0 xl:static">
       {/* Actions (Top) */}
       <div className="flex items-center gap-6 h-14 px-4 border-b-2 border-dark-200">
         {/* prev */}
@@ -71,7 +78,7 @@ const Sidebar = () => {
 
           {/* tags */}
           <ul className="flex flex-wrap gap-3.5">
-            {userProfile.tags.en.map((tag, index) => (
+            {tags.en.map((_, index) => (
               <li key={index} className="bg-dark-200 px-3 py-1 rounded">
                 <span className="text-sm">{t(`tags.${index}`)}</span>
               </li>

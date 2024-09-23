@@ -23,7 +23,7 @@ const MainLayout = () => {
 
           {/* pages */}
           <div className="w-full h-full overflow-y-auto">
-            <div className="container">
+            <div className="container h-full">
               <Outlet />
             </div>
           </div>
