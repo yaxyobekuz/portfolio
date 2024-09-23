@@ -10,5 +10,8 @@
     { "name": "About", "href": "about" },
     { "name": "Projects", "href": "projects" },
     { "name": "Contact", "href": "contact" }
-  ]
+  ],
+  "homepage_title": "Hello, I'm **Yaxyobek Habibulloyev**",
+  "homepage_description": "As a web developer and designer, I am a result-oriented professional. My goal is to contribute to product success by creating and managing websites and web applications.",
+  "homepage_main_btn": "Projects"
 }

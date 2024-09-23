@@ -10,5 +10,8 @@
     { "name": "Haqida", "href": "about" },
     { "name": "Loyihalar", "href": "projects" },
     { "name": "Bog'lanish", "href": "contact" }
-  ]
+  ],
+  "homepage_title": "Assalomu alaykum,  Men **Habibulloyev Yaxyobek**man",
+  "homepage_description": "Veb dasturchi va dizayner sifatida men natijaga yo'naltirilgan professionalman. Maqsadim — veb-saytlar va veb-ilovalarni yaratish va boshqarish orqali mahsulot muvaffaqiyatiga hissa qo'shish",
+  "homepage_main_btn": "Loyihalar"
 }
