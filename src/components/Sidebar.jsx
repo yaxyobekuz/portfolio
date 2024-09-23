@@ -61,7 +61,7 @@ const Sidebar = () => {
         </button>
       </div>
 
-      <div className="pt-6 pb-5 h-[calc(100%-56px)] overflow-y-auto">
+      <div className="pt-6 pb-5 h-[calc(100%-56px)] overflow-y-auto scroll-primary">
         {/* Profile wrapper */}
         <div className="space-y-5 pt-0 p-5 border-b-2 border-dark-200">
           {/* image */}

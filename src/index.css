@@ -14,6 +14,28 @@
 
 /* --- Components --- */
 @layer components {
+  /* Scroll */
+  .scroll-primary::-webkit-scrollbar {
+    @apply w-2 bg-dark-200;
+  }
+
+  .scroll-primary::-webkit-scrollbar-thumb {
+    @apply w-2 bg-dark-100 border-solid border-2 border-dark-200 rounded-lg hover:bg-[#6f6f6f];
+  }
+
+  .scroll-primary-large {
+    @apply scroll-primary;
+  }
+
+  .scroll-primary-large::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  .scroll-primary-large::-webkit-scrollbar-thumb {
+    border-width: 3px;
+  }
+
+  /* Markdown */
   .markdown.strong-primary strong {
     @apply text-primary;
   }

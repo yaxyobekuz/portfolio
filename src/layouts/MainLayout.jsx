@@ -22,7 +22,7 @@ const MainLayout = () => {
           <Sidebar />
 
           {/* pages */}
-          <div className="w-full h-full overflow-y-auto">
+          <div className="w-full h-full overflow-y-auto scroll-primary sm:scroll-primary-large">
             <div className="container h-full">
               <Outlet />
             </div>
