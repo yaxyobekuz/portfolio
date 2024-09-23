@@ -1,0 +1,14 @@
+{
+  "header_lang_btn": "Til",
+  "sidebar_actions": {
+    "prev": "Oldingi",
+    "next": "Keyingi",
+    "reload": "Yangilash"
+  },
+  "header_navlinks": [
+    { "name": "Bosh sahifa", "href": "/" },
+    { "name": "Haqida", "href": "about" },
+    { "name": "Loyihalar", "href": "projects" },
+    { "name": "Bog'lanish", "href": "contact" }
+  ]
+}
