@@ -12,6 +12,35 @@
   }
 }
 
+/* --- Components --- */
+@layer components {
+  /* Headless ui */
+  .menu-items {
+    @apply absolute right-0 top-full min-w-36 bg-dark-300 origin-top-right mt-3 p-1.5 rounded-lg shadow-lg ring-1 ring-black/5 border-2 border-dark-200;
+  }
+
+  .menu-btn {
+    @apply flex items-center justify-between gap-3.5 py-2 px-4 border-2 border-dark-200 rounded-md transition-colors hover:bg-dark-200/30;
+  }
+
+  .menu-item {
+    @apply flex items-center gap-3.5 w-full px-3.5 py-2 rounded text-left transition-colors hover:bg-dark-200;
+  }
+
+  /* Header */
+  .header_navlink {
+    @apply flex justify-center relative py-2 hover:after:bg-primary/50;
+  }
+
+  .header_navlink:after {
+    @apply content-[""] absolute -bottom-[9px] left-0 w-full h-0.5 bg-transparent transition-colors duration-200;
+  }
+
+  .header_navlink.active::after {
+    @apply bg-primary;
+  }
+}
+
 /* --- Utilities --- */
 
 @layer utilities {
