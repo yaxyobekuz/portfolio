@@ -1,17 +1,13 @@
 import { createRoot } from "react-dom/client";
 
-// CSS (styles)
-import "./index.css";
+// I18next (for translate)
+import "./i18n";
 
 // Components
 import App from "./App.jsx";
 
-// Language provider
-import { LanguageProvider } from "./language/LanguageProvider.jsx";
+// CSS (styles)
+import "./index.css";
 
 // Render the project
-createRoot(document.getElementById("root")).render(
-  <LanguageProvider>
-    <App />
-  </LanguageProvider>
-);
+createRoot(document.getElementById("root")).render(<App />);
