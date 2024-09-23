@@ -14,6 +14,15 @@
 
 /* --- Components --- */
 @layer components {
+  .markdown.strong-primary strong {
+    @apply text-primary;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply flex items-center justify-center gap-3 relative bg-primary px-11 py-2.5 rounded-lg transition-all hover:bg-primary/80 active:bg-primary md:text-lg;
+  }
+
   /* Headless ui */
   .menu-items {
     @apply absolute right-0 top-full min-w-36 bg-dark-300 origin-top-right mt-3 p-1.5 rounded-lg shadow-lg ring-1 ring-black/5 border-2 border-dark-200;
