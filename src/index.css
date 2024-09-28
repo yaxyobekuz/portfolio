@@ -10,6 +10,12 @@
   body {
     @apply text-base text-secondary font-normal font-poppins bg-dark-300;
   }
+
+  a:focus,
+  button:focus,
+  input:focus {
+    @apply focus:!outline-4 focus:!outline-white/5;
+  }
 }
 
 /* --- Components --- */
@@ -69,6 +75,15 @@
 
   .header_navlink.active::after {
     @apply bg-primary;
+  }
+
+  /* Navbar */
+  .navbar-link {
+    @apply flex items-center justify-center gap-3.5 size-11 rounded opacity-60 transition-opacity duration-200;
+  }
+
+  .navbar-link.active {
+    @apply opacity-100;
   }
 }
 
