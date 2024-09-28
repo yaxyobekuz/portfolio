@@ -14,21 +14,22 @@ import { useTranslation } from "react-i18next";
 import githubLogo from "../assets/images/icons/github-logo.svg";
 import hamburgerMenuIcon from "../assets/images/icons/hamburger-menu.svg";
 
-const Header = () => {
+const Header = ({ toggleOpenSidebar }) => {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const isEn = currentLanguage === "en";
   const navLinks = t("header_navlinks", { returnObjects: true });
 
   return (
-    <header className="flex items-center justify-between h-14 bg-dark-300 px-3.5 border-b-2 border-dark-200 sm:px-4">
+    <header className="flex items-center justify-between relative z-3 h-14 bg-dark-300 pl-3.5 pr-5 border-b-2 border-dark-200 xl:px-5">
       {/* Logo & Hamburger menu btn wrapper */}
       <div className="flex items-center gap-3.5 sm:gap-5">
         {/* hamburger menu btn */}
         <button
+          onClick={toggleOpenSidebar}
           title={isEn ? "Menu" : "Menyu"}
           aria-label={isEn ? "Menu" : "Menyu"}
-          className="flex items-center justify-center size-11 rounded"
+          className="flex items-center justify-center size-11 rounded xl:hidden"
         >
           <img
             width={24}
@@ -52,7 +53,7 @@ const Header = () => {
       </div>
 
       {/* Navbar & Actions wrapper */}
-      <div className="flex items-center gap-12">  
+      <div className="flex items-center gap-12">
         {/* Navbar */}
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-7">
@@ -68,15 +69,12 @@ const Header = () => {
 
         {/* Actions */}
         <div className="flex items-center gap-3.5 sm:gap-5">
-          {/* lang menu btn */}
-          <LangMenu />
-
           {/* github */}
           <a
             target="_blank"
             className="p-2 rounded"
             rel="noopener noreferrer"
-            href={userProfile.socialLinks.github}
+            href={userProfile.socialLinks.en[0].value}
             aria-label={`${userProfile.firstName} github profile`}
           >
             <img
@@ -87,6 +85,9 @@ const Header = () => {
               alt="github logo svg"
             />
           </a>
+
+          {/* lang menu btn */}
+          <LangMenu />
         </div>
       </div>
     </header>
