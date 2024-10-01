@@ -7,6 +7,8 @@ import en from "./locales/en.json";
 import uz from "./locales/uz.json";
 import userProfile from "./data/userProfile";
 
+const savedLang = localStorage.getItem('language');
+const currentLanguage = savedLang ? savedLang : "en";
 const { tags, socialLinks, contactInfo } = userProfile;
 
 i18n.use(initReactI18next).init({
@@ -14,7 +16,7 @@ i18n.use(initReactI18next).init({
     en: { translation: en },
     uz: { translation: uz },
   },
-  lng: "en",
+  lng: currentLanguage,
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

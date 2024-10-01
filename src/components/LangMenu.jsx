@@ -25,6 +25,7 @@ const LangMenu = () => {
 
   const handleLanguageChange = (value) => {
     i18n.changeLanguage(value);
+    localStorage.setItem("language", value);
   };
 
   return (
