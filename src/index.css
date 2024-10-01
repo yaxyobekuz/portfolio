@@ -11,6 +11,14 @@
     @apply text-base text-secondary font-normal font-poppins bg-dark-300;
   }
 
+  h1 {
+    @apply text-3xl font-semibold md:leading-normal md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold md:leading-normal md:text-3xl;
+  }
+
   a:focus,
   button:focus,
   input:focus {
@@ -44,6 +52,20 @@
   /* Markdown */
   .markdown.strong-primary strong {
     @apply text-primary;
+  }
+
+  /* title rectangle */
+  .title-rectangle {
+    @apply flex flex-col items-start gap-2;
+  }
+
+  .title-rectangle::after {
+    content: "";
+    @apply inline-block w-32 h-2 bg-primary rounded-full;
+  }
+
+  h2.title-rectangle::after{
+    @apply w-28 h-1.5;
   }
 
   /* Buttons */
