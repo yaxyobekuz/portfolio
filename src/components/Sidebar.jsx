@@ -31,13 +31,13 @@ const Sidebar = ({ isOpen = false, onClose }) => {
         <div className="h-14 border-b-2 border-dark-200 xl:hidden"></div>
 
         {/* Actions (Top) */}
-        <div className="flex items-center gap-6 h-14 px-4 border-b-2 border-dark-200">
+        <div className="flex items-center gap-5 h-14 px-1 border-b-2 border-dark-200">
           {/* prev */}
           <Link
             to={-1}
             title={t("sidebar_actions.prev")}
             aria-label={t("sidebar_actions.prev")}
-            className="flex items-center justify-center size-9 bg--200 rounded"
+            className="flex items-center justify-center size-12 rounded-md"
           >
             <SolidArrow direction="left" />
           </Link>
@@ -47,7 +47,7 @@ const Sidebar = ({ isOpen = false, onClose }) => {
             to={+1}
             title={t("sidebar_actions.next")}
             aria-label={t("sidebar_actions.next")}
-            className="flex items-center justify-center size-9 bg--200 rounded"
+            className="flex items-center justify-center size-12 rounded-md"
           >
             <SolidArrow direction="right" />
           </Link>
@@ -57,7 +57,7 @@ const Sidebar = ({ isOpen = false, onClose }) => {
             onClick={handlePageReload}
             title={t("sidebar_actions.reload")}
             aria-label={t("sidebar_actions.reload")}
-            className="flex items-center justify-center size-9 bg--200 rounded"
+            className="flex items-center justify-center size-12 rounded-md"
           >
             <Icon src={reloadIcon} />
           </button>

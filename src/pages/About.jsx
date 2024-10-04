@@ -50,9 +50,18 @@ const About = () => {
               key={i}
               title={tool.name}
               aria-label={tool.name}
-              className="flex items-center justify-center h-28 bg-dark-300 rounded-xl border-2 border-dark-200 xs:h-32"
+              className="group flex items-center justify-center relative h-28 bg-dark-300 rounded-xl border-2 border-dark-200 xs:h-32"
             >
-              <Icon size={64} src={tool.icon} className="size-14 sm:size-16" />
+              <Icon
+                size={64}
+                src={tool.icon}
+                alt={`${tool.name} logo icon`}
+                className="size-14 group-hover:hidden sm:size-16"
+              />
+
+              <h3 className="hidden absolute text-lg group-hover:block sm:text-xl">
+                {tool.name}
+              </h3>
             </li>
           ))}
         </ul>
@@ -85,8 +94,10 @@ const About = () => {
               </div>
 
               {/* details */}
-              <div className="space-y-1.5">
-                <h3 className="sm:text-lg font-semibold">{item.title}</h3>
+              <div className="space-y-1.5 overflow-hidden">
+                <h3 className="truncate font-semibold sm:text-lg">
+                  {item.title}
+                </h3>
 
                 {/* description */}
                 <p className="opacity-70 text-sm sm:line-clamp-2 sm:text-base">
