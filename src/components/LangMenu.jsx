@@ -1,19 +1,14 @@
-import React, { Fragment } from "react";
-
-// Headless ui components
-import {
-  Menu,
-  MenuItem,
-  MenuItems,
-  Transition,
-  MenuButton,
-} from "@headlessui/react";
-
-// Components
-import SolidArrow from "./SolidArrow";
+import React from "react";
 
 // Translate
 import { useTranslation } from "react-i18next";
+
+// Components
+import Icon from "./Icon";
+import DefaultTransition from "./DefaultTransition";
+
+// Headless ui components
+import { Menu, MenuItem, MenuItems, MenuButton } from "@headlessui/react";
 
 // Images
 import flagUZIcon from "../assets/images/icons/flag-uz.svg";
@@ -31,39 +26,18 @@ const LangMenu = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <MenuButton className="menu-btn px-2 sm:px-4 sm:min-w-[155px]">
-        {/* <SolidArrow size={18} /> */}
-        <img
-          width={24}
-          height={24}
-          className="size-6"
-          src={translateLanguageIcon}
-          alt="translate language icon"
-          />
-          <span className="hidden sm:inline">{t("header_lang_btn")}</span>
+        <Icon src={translateLanguageIcon} alt="translate language icon" />
+        <span className="hidden sm:inline">{t("header_lang_btn")}</span>
       </MenuButton>
 
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-y-80"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-y-80"
-      >
+      <DefaultTransition>
         <MenuItems as="ul" className="menu-items min-w-[155px]">
           <MenuItem as="li">
             <button
               className="menu-item justify-between px-2"
               onClick={() => handleLanguageChange("uz")}
             >
-              <img
-                width={24}
-                height={24}
-                src={flagUZIcon}
-                className="size-6"
-                alt="uzbekistan flag"
-              />
+              <Icon src={flagUZIcon} alt="uzbekistan flag" />
               <span>O'zbek</span>
             </button>
           </MenuItem>
@@ -73,18 +47,12 @@ const LangMenu = () => {
               className="menu-item justify-between px-2"
               onClick={() => handleLanguageChange("en")}
             >
-              <img
-                width={24}
-                height={24}
-                src={flagUKIcon}
-                className="size-6"
-                alt="united kingdom flag"
-              />
+              <Icon src={flagUKIcon} alt="united kingdom flag" />
               <span>English</span>
             </button>
           </MenuItem>
         </MenuItems>
-      </Transition>
+      </DefaultTransition>
     </Menu>
   );
 };
