@@ -10,7 +10,12 @@ import { useTranslation } from "react-i18next";
 import Icon from "../components/Icon";
 import Searchbox from "../components/Searchbox";
 import SpinLoader from "../components/SpinLoader";
+import ProjectItem from "../components/ProjectItem";
 import ProjectsFilterMenu from "../components/ProjectsFilterMenu";
+
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+import { updateProjectsData } from "../store/slices/projectsDataSlice";
 
 // Firebase
 import { collection, getDocs, getFirestore } from "firebase/firestore";
@@ -18,17 +23,17 @@ import { collection, getDocs, getFirestore } from "firebase/firestore";
 // Images
 import filterIcon from "../assets/images/icons/filter.svg";
 import reloadIcon from "../assets/images/icons/reload.svg";
-import ProjectItem from "../components/ProjectItem";
 
 const Projects = () => {
   const db = getFirestore(app);
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const [query, setQuery] = useState("");
   const [error, setError] = useState(false);
-  const [loader, setLoader] = useState(true);
-  const [allProjects, setAllProjects] = useState([]);
   const [projectType, setProjectType] = useState("all");
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const allProjects = useSelector((state) => state.projectsData.data);
+  const [loader, setLoader] = useState(allProjects.length > 0 ? false : true);
 
   // fetches the list of projects from the 'projects' collection in the database
   const fetchProjects = async () => {
@@ -40,8 +45,6 @@ const Projects = () => {
       }));
       return projectsList;
     } catch (error) {
-      console.log("yeinewuobuoib");
-
       throw new Error("Failed to fetch projects");
     }
   };
@@ -52,8 +55,8 @@ const Projects = () => {
     setLoader(true); // Show loader while data is being fetched
     fetchProjects()
       .then((projects) => {
-        if (projects.length > 0) {
-          setAllProjects(projects);
+        if (projects?.length > 0) {
+          dispatch(updateProjectsData(projects));
         } else {
           setError(true);
         }
@@ -64,7 +67,9 @@ const Projects = () => {
 
   // load project data when component mounts
   useEffect(() => {
-    loadProjectsData();
+    if (0 >= allProjects?.length) {
+      loadProjectsData();
+    }
   }, []);
 
   // filter projects
