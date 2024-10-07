@@ -1,19 +1,27 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 // Components
 import Icon from "./Icon";
+
+// Translate
+import { useTranslation } from "react-i18next";
+
+// Helpers
+import { firstLetterToUpperCase } from "../helpers";
+
+// Redux
+import { useDispatch } from "react-redux";
+import { openModal, updateModalData } from "../store/slices/modalsSlice";
 
 // Images
 import eyeIcon from "../assets/images/icons/eye.svg";
 import linkIcon from "../assets/images/icons/link.svg";
 import githubLogoIcon from "../assets/images/icons/github-logo.svg";
 
-// Helpers
-import { firstLetterToUpperCase } from "../helpers";
-
 const ProjectItem = ({ data }) => {
-  const { t } = useTranslation();
+  const dispatch = useDispatch();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   // Helpers
   const renderProjectLvl = (lvl) => {
@@ -54,6 +62,11 @@ const ProjectItem = ({ data }) => {
     );
   };
 
+  const handleOpenProjectModal = () => {
+    dispatch(openModal("project"));
+    dispatch(updateModalData({ modal: "project", data }));
+  };
+
   return (
     <li className="space-y-4">
       <div className="relative">
@@ -73,6 +86,7 @@ const ProjectItem = ({ data }) => {
           <button
             title={t("view")}
             aria-label={t("view")}
+            onClick={handleOpenProjectModal}
             className="bg-dark-300 p-2 rounded-md border-2 border-dark-200 transition-colors hover:bg-[#262626]"
           >
             <Icon
@@ -98,7 +112,7 @@ const ProjectItem = ({ data }) => {
       {/* title wrapper */}
       <div className="flex items-center justify-between gap-3.5">
         <h3 className="sm:text-xl sm:font-medium">
-          {firstLetterToUpperCase(data.title)}
+          {firstLetterToUpperCase(data.title[currentLanguage])}
         </h3>
         {renderProjectLvl(data.level)}
       </div>
