@@ -18,5 +18,21 @@
   "about_page_description": "Hello, my name is Habibulloyev Yaxyobek. I was born in 2006 in the Andijan region of the Republic of Uzbekistan. From a young age, my interest in technology led me to web development. I enjoy creating user-friendly and efficient applications, which constantly inspires me to grow in this field. \n\n Programming fascinates me because it requires not only creative thinking but also the ability to find the most efficient solution to every problem. My primary goal when developing applications is to create products that combine multi-functionality, modern design, and ease of use for users. \n\n I specialize in developing web applications using React, Tailwind CSS, and other cutting-edge technologies. My aim is to create fast and intuitive user interfaces for websites while maintaining a perfect balance between design and functionality. \n\n As I continue to grow in web development, I strive to create intuitive and user-friendly products. At the same time, I am constantly learning new technologies to broaden my knowledge and improve my skills. \n\n If you're interested in the projects I’ve worked on, feel free to visit the Projects page!",
   "about_page_projects_btn": "Projects",
   "technologies_section_title": "Technologies",
-  "advantages_section_title": "What I Can Do"
+  "advantages_section_title": "What I Can Do",
+  "projects_page_title": "Projects",
+  "projects_page_filter_menu_btn": "Project type",
+  "search": "Search",
+  "filter": "Filter",
+  "loading_data": "Loading data",
+  "error_msg": {
+    "title": "Something went wrong!",
+    "description": "Please try reloading the data."
+  },
+  "reload": "Reload",
+  "high": "High",
+  "medium": "Medium",
+  "low": "Low",
+  "link": "link",
+  "project": "Project",
+  "view": "View"
 }

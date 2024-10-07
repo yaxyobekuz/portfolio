@@ -18,5 +18,21 @@
   "about_page_description": "Assalomu alaykum, Men Habibulloyev Yaxyobekman. Men 2006-yil O’zbekiston Respublikasining Andijon viloyatida tug’ilganman. Yoshligimdan texnologiyaga bo'lgan qiziqishim meni veb dasturchilikka yetakladi. Men foydalanuvchilar uchun qulay va samarali dasturlar yaratishni yaxshi ko'raman, bu esa meni bu sohada doimiy o'sishga ilhomlantiradi.\n\n Dasturlash – bu meni qiziqtiradigan jarayon, chunki u nafaqat ijodiy tafakkurni talab qiladi, balki har bir muammo uchun eng samarali yechimni izlashni o'rgatadi. Dastur yaratishda asosiy maqsadim – ko'p funksionallikka ega, zamonaviy dizayn bilan birga foydalanuvchilarga qulay foydalanish hususiyatini taqdim etadigan mahsulot yaratishdir.\n\n Men asosan React, Tailwind CSS va boshqa ilg'or texnologiyalar yordamida veb ilovalar ishlab chiqaman. Maqsadim – veb saytlarda tezkor va qulay foydalanuvchi interfeysi yaratish, shuningdek, dizayn va funksionallik o'rtasida muvozanatni saqlashdir. \n\n Veb dasturlashdagi o'sishim davomida, foydalanuvchilarga intuitiv va qulay mahsulotlar yaratishga intilaman. Bu bilan birga, yangi texnologiyalarni o'rganib, o'z bilimlarimni kengaytirishga harakat qilaman. \n\n Agar mening loyihalarim sizni qiziqtirsa, Loyihalar sahifasiga tashrif buyurishingiz mumkin!",
   "about_page_projects_btn": "Loyihalar",
   "technologies_section_title": "Texnologiyalar",
-  "advantages_section_title": "Men nima qila olaman"
+  "advantages_section_title": "Men nima qila olaman",
+  "projects_page_title": "Loyihalar",
+  "projects_page_filter_menu_btn": "Loyiha turi",
+  "search": "Qidirish",
+  "filter": "Filtrlash",
+  "loading_data": "Ma'lumotlar yuklanmoqda",
+  "error_msg": {
+    "title": "Noma'lum xatolik yuz berdi!",
+    "description": "Iltimos, ma'lumotlarni qaytadan yuklab ko'ring."
+  },
+  "reload": "Qayta yuklash",
+  "high": "Yuqori",
+  "medium": "O'rta",
+  "low": "Past",
+  "link": "havolasi",
+  "project": "Loyiha",
+  "view": "Ko'rish"
 }
