@@ -7,6 +7,7 @@ import en from "./locales/en.json";
 import uz from "./locales/uz.json";
 import advantages from "./data/advantages";
 import userProfile from "./data/userProfile";
+import projectsFilterMenuItems from "./data/projectsFilterMenuItems";
 
 const savedLang = localStorage.getItem("language");
 const currentLanguage = savedLang ? savedLang : "en";
@@ -29,6 +30,7 @@ i18n.addResources("en", "translation", {
   advantages: advantages.en,
   socialLinks: socialLinks.en,
   contactInfo: contactInfo.en,
+  projectsFilterMenuItems: projectsFilterMenuItems.en,
 });
 
 i18n.addResources("uz", "translation", {
@@ -36,6 +38,7 @@ i18n.addResources("uz", "translation", {
   advantages: advantages.uz,
   socialLinks: socialLinks.uz,
   contactInfo: contactInfo.uz,
+  projectsFilterMenuItems: projectsFilterMenuItems.uz,
 });
 
 export default i18n;
