@@ -24,6 +24,15 @@
   input:focus {
     @apply focus:!outline-4 focus:!outline-white/5;
   }
+
+  input,
+  textarea {
+    @apply flex items-center w-full h-12 bg-dark-300 px-3.5 rounded-md border-2 border-dark-200;
+  }
+
+  textarea {
+    @apply scroll-primary h-96 py-2.5 resize-none sm:h-72;
+  }
 }
 
 /* --- Components --- */

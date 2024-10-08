@@ -69,12 +69,12 @@ const Searchbox = ({ onChange, className = "" }) => {
         type="search"
         value={query}
         maxLength={240}
+        className="pl-12"
         autoComplete="off"
         title={t("search")}
         ref={searchInputRef}
         onChange={handleChange}
         placeholder={t("search") + "..."}
-        className="flex items-center w-full h-12 bg-dark-300 pl-12 pr-5 rounded-md border-2 border-dark-200"
       />
 
       {/* bar */}
