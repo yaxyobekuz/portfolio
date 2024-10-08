@@ -35,5 +35,22 @@
   "link": "havolasi",
   "project": "Loyiha",
   "view": "Ko'rish",
-  "close": "Yopish"
+  "close": "Yopish",
+  "contact": "Bog'lanish",
+  "send_request": "So'rov yuborish",
+  "inputs": {
+    "name": {
+      "label": "Ism",
+      "placeholder": "Ismingiz"
+    },
+    "email": {
+      "label": "Elektron pochta",
+      "placeholder": "Email@example.com"
+    },
+    "description": {
+      "label": "Xabar",
+      "placeholder": "Xabaringiz"
+    }
+  },
+  "submit": "Yuborish"
 }

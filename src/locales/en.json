@@ -35,5 +35,22 @@
   "link": "link",
   "project": "Project",
   "view": "View",
-  "close": "Close"
+  "close": "Close",
+  "contact": "Contact",
+  "send_request": "Send a request",
+  "inputs": {
+    "name": {
+      "label": "Name",
+      "placeholder": "Your name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Email@example.com"
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Your message"
+    }
+  },
+  "submit": "Submit"
 }
