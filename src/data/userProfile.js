@@ -63,40 +63,46 @@ const userProfile = {
         type: "email",
         name: "Email",
         value: "pubgn9642@gmail.com",
-        icon: { url: gmailLogo, fill: "#ffffff" },
+        icon: {
+          url: gmailLogo,
+          fill: "linear-gradient(135deg,#4286f440 15%,#ea443540 35%,#fbbc0540 65%,#34a85340)",
+        },
       },
       {
         type: "tel",
         name: "Phone number",
         value: "+9982000077729",
-        icon: { url: telephoneLogo, fill: "#ffffff" },
+        icon: { url: telephoneLogo, fill: "#00E06C30" },
       },
       {
         type: "address",
         name: "Address",
         value: "Uzbekistan, Andijan",
-        icon: { url: addressLogo, fill: "#ffffff" },
+        icon: { url: addressLogo, fill: "#FBBC0530" },
       },
     ],
 
-    en: [
+    uz: [
       {
         type: "email",
         name: "E-pochta",
         value: "pubgn9642@gmail.com",
-        icon: { url: gmailLogo, fill: "#ffffff" },
+        icon: {
+          url: gmailLogo,
+          fill: "linear-gradient(135deg,#4286f440 15%,#ea443540 35%,#fbbc0540 65%,#34a85340)",
+        },
       },
       {
         type: "tel",
         name: "Telefon raqam",
         value: "+9982000077729",
-        icon: { url: telephoneLogo, fill: "#ffffff" },
+        icon: { url: telephoneLogo, fill: "#00E06C30" },
       },
       {
         type: "address",
         name: "Manzil",
-        value: "Uzbekistan, Andijan",
-        icon: { url: addressLogo, fill: "#ffffff" },
+        value: "O'zbekiston, Andijon",
+        icon: { url: addressLogo, fill: "#FBBC0530" },
       },
     ],
   },
