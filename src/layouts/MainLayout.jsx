@@ -20,11 +20,11 @@ const MainLayout = () => {
 
   useEffect(() => {
     setIsOpenSidebar(false);
-    const firstPath = location.pathname.split("/").filter((i) => i !== "")[0];
+    const firstPath = location.pathname.split("/").filter((i) => i !== "")[1];
     const getTitle = (href) => navlinks.find((nav) => nav.href === href)?.name;
-    const title = `YAXYOBEK UZ | ${getTitle(firstPath) || getTitle("/")}`;
+    const title = `Yaxyobek Uz | ${getTitle(firstPath) || getTitle("/")}`;
 
-    document.title = title.toUpperCase();
+    document.title = title;
   }, [location, i18n.language]);
 
   return (
