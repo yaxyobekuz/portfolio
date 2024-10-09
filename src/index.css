@@ -63,6 +63,14 @@
     @apply text-primary;
   }
 
+  .markdown.strong-white strong {
+    @apply text-white;
+  }
+
+  .markdown a {
+    @apply text-[#3bbc71] underline;
+  }
+
   /* title rectangle */
   .title-rectangle {
     @apply flex flex-col items-start gap-2;

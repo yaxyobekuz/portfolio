@@ -15,6 +15,7 @@ import { closeModal } from "../store/slices/modalsSlice";
 
 // Images
 import crossIcon from "../assets/images/icons/cross.svg";
+import MarkdownRenderer from "./MarkdownRenderer";
 
 const ProjectModal = () => {
   const dispatch = useDispatch();
@@ -97,7 +98,9 @@ const ProjectModal = () => {
         />
 
         {/* Description */}
-        <p className="opacity-70">{project.description[currentLanguage]}</p>
+        <div className="space-y-4 text-white/70 markdown strong-white">
+          <MarkdownRenderer text={project.description[currentLanguage]} />
+        </div>
       </div>
     </div>
   );
