@@ -52,5 +52,6 @@
       "placeholder": "Your message"
     }
   },
-  "submit": "Submit"
+  "submit": "Submit",
+  "empty_data": "Data not available"
 }

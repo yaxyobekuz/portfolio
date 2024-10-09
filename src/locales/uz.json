@@ -52,5 +52,6 @@
       "placeholder": "Xabaringiz"
     }
   },
-  "submit": "Yuborish"
+  "submit": "Yuborish",
+  "empty_data": "Ma'lumotlar mavjud emas"
 }
