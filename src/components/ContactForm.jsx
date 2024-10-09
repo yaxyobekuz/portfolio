@@ -12,8 +12,9 @@ import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
   const [name, setName] = useState("");
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const [email, setEmail] = useState("");
   const [loader, setLoader] = useState(false);
   const [description, setDescription] = useState("");
@@ -49,7 +50,7 @@ const ContactForm = () => {
     // send a request
     axios
       .post(apiUrl, formData)
-      .then(() => navigate("/success"))
+      .then(() => navigate(`/${currentLanguage}/success`))
       .catch(() => alert(t("error_msg.title")))
       .finally(() => setLoader(false));
   };

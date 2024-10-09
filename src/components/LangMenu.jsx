@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 
 // Translate
 import { useTranslation } from "react-i18next";
@@ -16,14 +17,35 @@ import flagUKIcon from "../assets/images/icons/flag-uk.svg";
 import translateLanguageIcon from "../assets/images/icons/translate-language.svg";
 
 const LangMenu = () => {
+  const { lang } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+  const pathArr = location.pathname.split("/").filter((i) => i !== "");
+  pathArr.shift();
 
-  const handleLanguageChange = (value) => {
-    i18n.changeLanguage(value);
-    localStorage.setItem("language", value);
-    const elDocument = document.getElementsByTagName("html")[0];
-    elDocument.lang = value;
+  const languageHref = (lang) => {
+    return `/${lang}/${pathArr.join("/")}`;
   };
+
+  // Change language
+  useEffect(() => {
+    const languages = ["uz", "en"];
+
+    if (languages.includes(lang)) {
+      i18n.changeLanguage(lang);
+
+      // save current language to local storage
+      localStorage.setItem("language", lang);
+
+      // change language attribute value to current language
+      const elDocument = document.getElementsByTagName("html")[0];
+      elDocument.lang = lang;
+    } else {
+      navigate(languageHref("en"));
+      console.log("update language");
+    }
+  }, [location.pathname]);
 
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -35,23 +57,23 @@ const LangMenu = () => {
       <DefaultTransition>
         <MenuItems as="ul" className="menu-items min-w-[155px]">
           <MenuItem as="li">
-            <button
+            <Link
+              to={languageHref("uz")}
               className="menu-item justify-between px-2"
-              onClick={() => handleLanguageChange("uz")}
             >
               <Icon src={flagUZIcon} alt="uzbekistan flag" />
               <span>O'zbek</span>
-            </button>
+            </Link>
           </MenuItem>
 
           <MenuItem as="li">
-            <button
+            <Link
+              to={languageHref("en")}
               className="menu-item justify-between px-2"
-              onClick={() => handleLanguageChange("en")}
             >
               <Icon src={flagUKIcon} alt="united kingdom flag" />
               <span>English</span>
-            </button>
+            </Link>
           </MenuItem>
         </MenuItems>
       </DefaultTransition>

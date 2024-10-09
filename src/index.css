@@ -118,7 +118,7 @@
 
   /* Navbar */
   .navbar-link {
-    @apply flex items-center justify-center gap-3.5 size-12 rounded opacity-60 transition-opacity duration-200;
+    @apply flex flex-col items-center justify-center gap-1 size-12 text-center rounded opacity-60 transition-opacity duration-200;
   }
 
   .navbar-link.active {

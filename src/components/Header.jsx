@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 // Components
 import LangMenu from "./LangMenu";
@@ -15,10 +15,12 @@ import githubLogo from "../assets/images/icons/github-logo.svg";
 import hamburgerMenuIcon from "../assets/images/icons/hamburger-menu.svg";
 
 const Header = ({ toggleOpenSidebar }) => {
+  const location = useLocation();
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const isEn = currentLanguage === "en";
   const navLinks = t("header_navlinks", { returnObjects: true });
+  const pathArr = location.pathname.split("/").filter((i) => i !== "");
 
   return (
     <header className="flex items-center justify-between relative z-4 h-14 bg-dark-300 pl-2.5 pr-5 border-b-2 border-dark-200 xl:px-5">
@@ -42,9 +44,9 @@ const Header = ({ toggleOpenSidebar }) => {
 
         {/* Logo */}
         <Link
-          to="/"
           title="Logo"
           aria-label="Logo"
+          to={`/${currentLanguage}`}
           className="text-xl font-medium"
         >
           <span>YAXYOBEK.</span>
@@ -57,10 +59,20 @@ const Header = ({ toggleOpenSidebar }) => {
         {/* Navbar */}
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-7">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink to={link.href} className="header_navlink">
-                  {t(`header_navlinks.${index}.name`)}
+            {navLinks.map((link, i) => (
+              <li key={i}>
+                <NavLink
+                  className={({ isActive }) =>
+                    (isActive && i !== 0) ||
+                    (i === 0 &&
+                      pathArr.length === 1 &&
+                      pathArr[0] === currentLanguage)
+                      ? "header_navlink active"
+                      : "header_navlink"
+                  }
+                  to={i === 0 ? "" : link.href}
+                >
+                  {t(`header_navlinks.${i}.name`)}
                 </NavLink>
               </li>
             ))}

@@ -6,8 +6,8 @@
     "reload": "Yangilash"
   },
   "header_navlinks": [
-    { "name": "Bosh sahifa", "href": "/" },
-    { "name": "Men haqimda", "href": "about" },
+    { "name": "Uy", "href": "/" },
+    { "name": "Haqida", "href": "about" },
     { "name": "Loyihalar", "href": "projects" },
     { "name": "Bog'lanish", "href": "contact" }
   ],

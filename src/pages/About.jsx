@@ -13,7 +13,8 @@ import MainArrow from "../components/MainArrow";
 import MarkdownRenderer from "../components/MarkdownRenderer";
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const advantages = t("advantages", { returnObjects: true });
 
   return (
@@ -29,7 +30,7 @@ const About = () => {
         </div>
 
         {/* projects link */}
-        <Link to="/projects" className="btn-primary group max-w-max px-9">
+        <Link to={`/${currentLanguage}/projects`} className="btn-primary group max-w-max px-9">
           <span>{t("about_page_projects_btn")}</span>
           <MainArrow
             direction="right"

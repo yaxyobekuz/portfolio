@@ -9,7 +9,8 @@ import MainArrow from "../components/MainArrow";
 import MarkdownRenderer from "../components/MarkdownRenderer";
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   return (
     <div className="flex flex-col items-start justify-end min-h-full pt-12 pb-20 sm:py-24 sm:items-center sm:justify-center">
@@ -25,7 +26,10 @@ const Home = () => {
         </p>
 
         {/* Projects link */}
-        <Link to="/about" className="btn-primary group px-9">
+        <Link
+          to={`/${currentLanguage}/about`}
+          className="btn-primary group px-9"
+        >
           <span>{t("homepage_main_btn")}</span>
           <MainArrow
             direction="right"
