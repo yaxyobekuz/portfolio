@@ -53,5 +53,10 @@
     }
   },
   "submit": "Yuborish",
-  "empty_data": "Ma'lumotlar mavjud emas"
+  "empty_data": "Ma'lumotlar mavjud emas",
+  "success_msg": {
+    "title": "Muvaffaqiyatli",
+    "description": "So'rov muvaffaqiyatli yuborildi"
+  },
+  "back": "Orqaga"
 }

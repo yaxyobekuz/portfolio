@@ -53,5 +53,10 @@
     }
   },
   "submit": "Submit",
-  "empty_data": "Data not available"
+    "empty_data": "Data not available",
+    "success_msg": {
+    "title": "Success",
+    "description": "The request has been successfully sent"
+  },
+  "back": "Back"
 }
