@@ -21,7 +21,7 @@ const Header = ({ toggleOpenSidebar }) => {
   const navLinks = t("header_navlinks", { returnObjects: true });
 
   return (
-    <header className="flex items-center justify-between relative z-3 h-14 bg-dark-300 pl-2.5 pr-5 border-b-2 border-dark-200 xl:px-5">
+    <header className="flex items-center justify-between relative z-4 h-14 bg-dark-300 pl-2.5 pr-5 border-b-2 border-dark-200 xl:px-5">
       {/* Logo & Hamburger menu btn wrapper */}
       <div className="flex items-center gap-3.5 sm:gap-5">
         {/* hamburger menu btn */}

@@ -25,7 +25,7 @@ const Sidebar = ({ isOpen = false, onClose }) => {
       <div
         className={`${
           isOpen ? "translate-x-0" : "-translate-x-full xl:!translate-x-0"
-        } absolute inset-y-0 left-0 z-2 w-full xs:w-[340px] h-full shrink-0 bg-dark-300 border-r-2 border-dark-200 transition-transform duration-200 xl:static`}
+        } absolute inset-y-0 left-0 z-3 w-full xs:w-[340px] h-full shrink-0 bg-dark-300 border-r-2 border-dark-200 transition-transform duration-200 xl:static`}
       >
         {/* Mobile header */}
         <div className="h-14 border-b-2 border-dark-200 xl:hidden"></div>

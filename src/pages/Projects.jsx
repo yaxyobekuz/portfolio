@@ -9,17 +9,18 @@ import { useTranslation } from "react-i18next";
 // Components
 import Icon from "../components/Icon";
 import Searchbox from "../components/Searchbox";
+import EmptyData from "../components/EmptyData";
 import SpinLoader from "../components/SpinLoader";
 import ProjectItem from "../components/ProjectItem";
 import ProjectModal from "../components/ProjectModal";
 import ProjectsFilterMenu from "../components/ProjectsFilterMenu";
 
+// Firebase
+import { collection, getDocs, getFirestore } from "firebase/firestore";
+
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { updateProjectsData } from "../store/slices/projectsDataSlice";
-
-// Firebase
-import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 // Images
 import filterIcon from "../assets/images/icons/filter.svg";
@@ -27,8 +28,9 @@ import reloadIcon from "../assets/images/icons/reload.svg";
 
 const Projects = () => {
   const db = getFirestore(app);
-  const { t } = useTranslation();
   const dispatch = useDispatch();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const [query, setQuery] = useState("");
   const [error, setError] = useState(false);
   const [projectType, setProjectType] = useState("all");
@@ -81,12 +83,18 @@ const Projects = () => {
         setFilteredProjects(allProjects);
       } else {
         const filtered = allProjects.filter((project) => {
-          const search = project.title.toLowerCase().includes(query);
+          const search = project.title[currentLanguage]
+            .toLowerCase()
+            .includes(query);
           const type =
             !projectType || projectType === "all"
               ? true
               : project.type.toLowerCase().includes(projectType);
-          return search && type;
+          const tag = project.tags.some(
+            (tag) => tag.toLowerCase().trim() === query
+          );
+
+          return (search || tag) && type;
         });
 
         setFilteredProjects(filtered);
@@ -155,13 +163,16 @@ const Projects = () => {
                     <Icon src={reloadIcon} alt="reload icon" />
                   </button>
                 </div>
-              ) : (
-                // Projects list
+              ) : // Projects list
+              filteredProjects?.length > 0 ? (
                 <ul className="grid grid-cols-1 gap-x-5 gap-y-8 sm:gap-y-6 md:grid-cols-2">
                   {filteredProjects.map((project, index) => {
                     return <ProjectItem key={project.id} data={project} />;
                   })}
                 </ul>
+              ) : (
+                // Empty data
+                <EmptyData />
               )}
             </div>
           )}

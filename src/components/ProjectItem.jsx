@@ -118,9 +118,9 @@ const ProjectItem = ({ data }) => {
       </div>
 
       {/* tags */}
-      <ul className="flex flex-wrap gap-3.5">
+      <ul className="flex flex-wrap gap-y-1.5 gap-x-3.5">
         {data.tags.map((tag, index) => (
-          <li key={index} className="text-primary font-medium">
+          <li key={index} className="text-primary font-medium text-sm xs:text-base">
             #{tag}
           </li>
         ))}
