@@ -21,6 +21,8 @@ const LangMenu = () => {
   const handleLanguageChange = (value) => {
     i18n.changeLanguage(value);
     localStorage.setItem("language", value);
+    const elDocument = document.getElementsByTagName("html")[0];
+    elDocument.lang = value;
   };
 
   return (

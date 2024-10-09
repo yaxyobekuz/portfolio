@@ -6,15 +6,26 @@ import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Sidebar from "../components/Sidebar";
 
+// Translate
+import { useTranslation } from "react-i18next";
+
 // Images
 import backgroundImage from "../assets/images/backgrounds/body.jpg";
 
 const MainLayout = () => {
   const location = useLocation();
+  const { t, i18n } = useTranslation();
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
+  const navlinks = t("header_navlinks", { returnObjects: true });
+
   useEffect(() => {
     setIsOpenSidebar(false);
-  }, [location]);
+    const firstPath = location.pathname.split("/").filter((i) => i !== "")[0];
+    const getTitle = (href) => navlinks.find((nav) => nav.href === href)?.name;
+    const title = `YAXYOBEK UZ | ${getTitle(firstPath) || getTitle("/")}`;
+
+    document.title = title.toUpperCase();
+  }, [location, i18n.language]);
 
   return (
     <>
