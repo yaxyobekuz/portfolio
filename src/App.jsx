@@ -17,16 +17,18 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Success from "./pages/Success";
 import Projects from "./pages/Projects";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/:lang" element={<MainLayout />}>
+      <Route path="/:lang?" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="success" element={<Success />} />
         <Route path="contact" element={<Contact />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );

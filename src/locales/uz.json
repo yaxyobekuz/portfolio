@@ -58,5 +58,6 @@
     "title": "Muvaffaqiyatli",
     "description": "So'rov muvaffaqiyatli yuborildi"
   },
-  "back": "Orqaga"
+  "back": "Orqaga",
+  "page_not_found": "Sahifa topilmadi!"
 }
