@@ -71,7 +71,7 @@ const userProfile = {
       {
         type: "tel",
         name: "Phone number",
-        value: "+9982000077729",
+        value: "+998200077729",
         icon: { url: telephoneLogo, fill: "#00E06C30" },
       },
       {
@@ -95,7 +95,7 @@ const userProfile = {
       {
         type: "tel",
         name: "Telefon raqam",
-        value: "+9982000077729",
+        value: "+998200077729",
         icon: { url: telephoneLogo, fill: "#00E06C30" },
       },
       {

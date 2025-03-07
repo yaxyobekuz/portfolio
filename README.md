@@ -1,38 +1,48 @@
-# React + Vite + TailwindCSS
+# 💼 Yaxyobek's Portfolio
 
-This project is built with **React**, **Vite**, and **TailwindCSS** to deliver a fast and responsive web application with a streamlined development experience.
+This project is built with **React**, **Vite**, and **TailwindCSS** to deliver a fast and responsive web application with a streamlined development experience. It includes **Firebase integration** for authentication, database, and hosting, as well as **multi-language support** for better accessibility.
 
-## Key Features
+![Project Preview](https://yaxyobekk.uz/preview.jpg)
+
+---
+
+### 🚀 **Live Demo**
+
+🔗 [View Live](https://yaxyobekk.uz/en)
+
+## 📌 Features
 
 - **Vite**: A fast development build tool with Hot Module Replacement (HMR).
 - **React**: A JavaScript library for building dynamic user interfaces.
 - **TailwindCSS**: A utility-first CSS framework that provides pre-configured styling for rapid UI development.
+- **Firebase Integration**: Authentication, Firestore database, and hosting services.
+- **Multi-language Support**: Allows users to switch between different languages dynamically.
 - **Hot Module Replacement (HMR)**: Enables instant updates without full page reload during development.
 - **ESLint**: Configured for linting JavaScript/JSX files for code quality.
 
-## Getting Started
+## 🔥 Getting Started
 
 ### Prerequisites
 
 - Node.js (version 14.x or higher)
 - npm (version 6.x or higher) or Yarn (optional)
 
-### Installation
+### 📥 Installation
 
-1. Clone the repository:
+1️⃣ Clone the repository:
 
-   ```bash
-   git clone https://github.com/yaxyobekuz/repo-name.git
-   cd repo-name
-   ```
+```bash
+git clone https://github.com/yaxyobekuz/portfolio.git
+cd portfolio
+```
 
-2. Install dependencies:
+2️⃣ Install dependencies:
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+```bash
+npm install
+# or
+yarn install
+```
 
 ### Development Server
 
@@ -78,16 +88,35 @@ npm run lint
 yarn lint
 ```
 
-## Project Structure
+## 🔑 Firebase Configuration
+
+Ensure you have a `.env` file in the root directory with the following Firebase credentials:
+
+```sh
+VITE_API_KEY=your_api_key
+VITE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+VITE_PROJECT_ID=your_project_id
+VITE_STORAGE_BUCKET=your_project_id.appspot.com
+VITE_MESSAGING_SENDER_ID=your_sender_id
+VITE_APP_ID=your_app_id
+VITE_MEASUREMENT_ID=your_measurement_id
+```
+
+## 📂 Project Structure
 
 ```bash
 ├── public/              # Public assets (favicon, etc.)
 ├── src/                 # Source files
 │   ├── assets/          # Static assets (images, icons, etc.)
 │   ├── components/      # Reusable React components
+│   ├── pages/           # Page components
+│   ├── layouts/         # Layout components
+│   ├── i18n/            # Language translation files
+│   ├── firebase/        # Firebase configuration and services
 │   ├── index.css        # Tailwind CSS configuration and global styles
 │   ├── App.jsx          # Main app component
-│   └── main.jsx         # Entry point for the app
+│   ├── main.jsx         # Entry point for the app
+│   └── ...              # Others...
 ├── postcss.config.js    # PostCSS configuration
 ├── tailwind.config.js   # TailwindCSS configuration
 ├── vite.config.js       # Vite configuration
@@ -95,7 +124,7 @@ yarn lint
 └── package.json         # Project metadata and dependencies
 ```
 
-## Customizing TailwindCSS
+## 💨 Customizing TailwindCSS
 
 TailwindCSS is already configured, but you can modify the `tailwind.config.js` file to extend or customize the theme, such as adding new colors, fonts, or spacing values.
 
@@ -106,31 +135,42 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#3490dc",
+        primary: "#39965F",
+        // ... More colors
       },
     },
   },
 };
 ```
 
-## Scripts
+## 🏃 Scripts
 
 - **`dev`**: Starts the development server with HMR.
 - **`build`**: Builds the application for production.
 - **`preview`**: Previews the production build.
 - **`lint`**: Lints your code with ESLint.
 
-## Technologies Used
+## 🛠 Technologies Used
 
 - **React**: A JavaScript library for building user interfaces.
 - **Vite**: A modern front-end build tool for blazing-fast development.
 - **TailwindCSS**: Utility-first CSS for styling and layout.
+- **Firebase**: Backend services including authentication, database, and hosting.
 - **PostCSS**: CSS tool for transforming styles with plugins like TailwindCSS.
 - **ESLint**: A tool for identifying and fixing problems in JavaScript code.
 
-## Learn More
+## 🔍 Learn More
 
 - [Vite Documentation](https://vitejs.dev/guide/)
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 - [TailwindCSS Documentation](https://tailwindcss.com/docs)
+- [Firebase Documentation](https://firebase.google.com/docs)
 - [ESLint Documentation](https://eslint.org/docs/user-guide/getting-started)
+
+---
+
+## 📞 **Contact**
+
+If you have any questions or feedback, feel free to reach out:  
+📧 Email: [pubgn9642@gmail.com](mailto:pubgn9642@gmail.com)  
+🔗 Website: [yaxyobekk.uz](https://yaxyobekk.uz/en)
