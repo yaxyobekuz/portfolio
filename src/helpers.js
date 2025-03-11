@@ -5,3 +5,7 @@ export const firstLetterToUpperCase = (text) => {
     return text;
   }
 };
+
+export const sortProjectsByPin = (projects) => {
+  return [...projects].sort((a, b) => (b?.pin === true) - (a?.pin === true));
+};

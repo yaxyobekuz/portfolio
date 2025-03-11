@@ -6,6 +6,9 @@ import { app } from "../firebase/config";
 // Translate
 import { useTranslation } from "react-i18next";
 
+// Utils
+import { sortProjectsByPin } from "../helpers";
+
 // Components
 import Icon from "../components/Icon";
 import Searchbox from "../components/Searchbox";
@@ -80,7 +83,7 @@ const Projects = () => {
   useEffect(() => {
     if (allProjects?.length > 0) {
       if (0 >= query?.length && (!projectType || projectType === "all")) {
-        setFilteredProjects(allProjects);
+        setFilteredProjects(sortProjectsByPin(allProjects));
       } else {
         const filtered = allProjects.filter((project) => {
           const search = project.title[currentLanguage]
