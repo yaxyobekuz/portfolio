@@ -62,7 +62,7 @@ const userProfile = {
       {
         type: "email",
         name: "Email",
-        value: "pubgn9642@gmail.com",
+        value: "info@yaxyobekk.uz",
         icon: {
           url: gmailLogo,
           fill: "linear-gradient(135deg,#4286f440 15%,#ea443540 35%,#fbbc0540 65%,#34a85340)",
@@ -86,7 +86,7 @@ const userProfile = {
       {
         type: "email",
         name: "E-pochta",
-        value: "pubgn9642@gmail.com",
+        value: "info@yaxyobekk.uz",
         icon: {
           url: gmailLogo,
           fill: "linear-gradient(135deg,#4286f440 15%,#ea443540 35%,#fbbc0540 65%,#34a85340)",
